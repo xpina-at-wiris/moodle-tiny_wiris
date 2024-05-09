@@ -38,7 +38,7 @@ Feature: Formulas are rendered on an Assignment feedback
     # Suboptimal way to click on the 'Grade' link since "I press", "I follow" and 'I click on "Grade" "link"' don't work.
     And I click on ".btn-primary" "css_element" in the "//div[@class='row']" "xpath_element"
     # 02. Grade the assignment.
-    And I click on "More options" in TinyMCE 6 editor
+    And I click on "More options" in TinyMCE 6 editor toolbar
     And I click on "MathType" "button"
     And I wait until MathType editor is displayed
     And I wait "3" seconds
@@ -74,7 +74,7 @@ Feature: Formulas are rendered on an Assignment feedback
     # Suboptimal way to click on the 'Grade' link since "I press", "I follow" and 'I click on "Grade" "link"' don't work.
     And I click on ".btn-primary" "css_element" in the "//div[@class='row']" "xpath_element"
     # 02. Grade the assignment.
-    And I click on "More options" in TinyMCE 6 editor
+    And I click on "More options" in TinyMCE 6 editor toolbar
     And I click on "MathType" "button"
     And I wait until MathType editor is displayed
     And I wait "3" seconds
