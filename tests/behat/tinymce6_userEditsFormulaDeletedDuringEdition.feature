@@ -1,25 +1,25 @@
 @tinymce6 @tinymce6_wiris @wiris_mathtype @tinymce6_edit_formula @mtmoodle-76
 Feature: Delete formula that is being edited
-In order to check if MathType formula can be formulas in edition
-As an admin
-I need to create a MathType formula
+  In order to check if MathType formula can be formulas in edition
+  As an admin
+  I need to create a MathType formula
 
-Background:
+  Background:
     Given the following config values are set as admin:
-      | config | value | plugin |
+      | config        | value                        | plugin      |
       | customtoolbar | tiny_mce_wiris_formulaEditor | editor_tiny |
     And the following "courses" exist:
       | fullname | shortname | format |
       | Course 1 | C1        | topics |
     And the following "course enrolments" exist:
-      | user     | course | role           |
-      | admin  | C1     | editingteacher |
+      | user  | course | role           |
+      | admin | C1     | editingteacher |
     And the "wiris" filter is "on"
     And the "mathjaxloader" filter is "off"
     And the "urltolink" filter is "off"
     And I log in as "admin"
 
-  @javascript @4.x @4.x_tinymce6 
+  @javascript @4.x @4.x_tinymce6
   Scenario: MTMOODLE-76 - Edit formula being deleted
     # Course
     And I am on "Course 1" course homepage with editing mode on
