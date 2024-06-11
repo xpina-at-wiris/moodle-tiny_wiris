@@ -1,5 +1,5 @@
 @tinymce6 @tinymce6_wiris @wiris_mathtype @tinymce6_edit_formula @mtmoodle-76
-Feature: Delete formula that is being edited
+Feature: User edits deleted formula
   In order to check if MathType formula can be formulas in edition
   As an admin
   I need to create a MathType formula
@@ -20,7 +20,7 @@ Feature: Delete formula that is being edited
     And I log in as "admin"
 
   @javascript @4.x @4.x_tinymce6
-  Scenario: MTMOODLE-76 - Edit formula being deleted
+  Scenario: MTMOODLE-76 - User edits deleted formula
     # Course
     And I am on "Course 1" course homepage with editing mode on
     And I add a "Page" to section "0" using the activity chooser
@@ -53,7 +53,7 @@ Feature: Delete formula that is being edited
     Then Wirisformula should not exist
 
   @javascript @4.0 @4.0_tinymce6
-  Scenario: MTMOODLE-76 - Edit formula being deleted
+  Scenario: MTMOODLE-76 - User edits deleted formula
     # Course
     And I am on "Course 1" course homepage with editing mode on
     And I add a "Page" to section "0"
