@@ -1,19 +1,19 @@
 @tinymce6 @tinymce6_wiris @wiris_mathtype @tinymce6_insert_formula @tinymce6_focus @mtmoodle-100
-Feature: Verify that we have focus after move modal window
-In order to write Mathematical formulas properly
-As an admin
-I need to use the modal window
+Feature: Modal window focus
+  In order to write Mathematical formulas properly
+  As an admin
+  I need to use the modal window
 
   Background:
     Given the following config values are set as admin:
-      | config | value | plugin |
+      | config        | value                        | plugin      |
       | customtoolbar | tiny_mce_wiris_formulaEditor | editor_tiny |
     And the following "courses" exist:
       | fullname | shortname | format |
       | Course 1 | C1        | topics |
     And the following "course enrolments" exist:
-      | user     | course | role           |
-      | admin  | C1     | editingteacher |
+      | user  | course | role           |
+      | admin | C1     | editingteacher |
     And the "wiris" filter is "on"
     And the "mathjaxloader" filter is "off"
     And the "urltolink" filter is "off"

@@ -1,18 +1,18 @@
 @tinymce6 @tinymce6_wiris @wiris_mathtype @tinymce6_insert_formula @tinymce6_symbols_and_attributes @mtmoodle-96
-Feature: Checking certain symbols
-In order to check if some symbols render correctly
-I need to create a formula
+Feature: Insert equations containing sensible symbols
+  In order to check if some symbols render correctly
+  I need to create a formula
 
   Background:
     Given the following config values are set as admin:
-      | config | value | plugin |
+      | config        | value                        | plugin      |
       | customtoolbar | tiny_mce_wiris_formulaEditor | editor_tiny |
     And the following "courses" exist:
       | fullname | shortname | format |
       | Course 1 | C1        | topics |
     And the following "course enrolments" exist:
-      | user     | course | role           |
-      | admin  | C1     | editingteacher |
+      | user  | course | role           |
+      | admin | C1     | editingteacher |
     And the "wiris" filter is "on"
     And the "mathjaxloader" filter is "off"
     And the "urltolink" filter is "off"
@@ -24,7 +24,7 @@ I need to create a formula
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name         | Test MathType for TinyMCE6 on Moodle |
-      | Page content | «<»>§&¨"`' |
+      | Page content | «<»>§&¨"`'                           |
     And I press "Save and display"
     Then "«<»>§&¨" "text" should exist
     Then "`'" "text" should exist
@@ -36,7 +36,7 @@ I need to create a formula
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
       | Name         | Test MathType for TinyMCE6 on Moodle |
-      | Page content | &laquo;Bonjour&raquo; |
+      | Page content | &laquo;Bonjour&raquo;                |
     And I press "Save and display"
     Then "«Bonjour»" "text" should exist
     Then Wirisformula should not exist
@@ -46,7 +46,7 @@ I need to create a formula
     And I am on "Course 1" course homepage with editing mode on
     And I add a "Page" to section "0" using the activity chooser
     And I set the following fields to these values:
-      | Name         | Test MathType for TinyMCE6 on Moodle |
+      | Name | Test MathType for TinyMCE6 on Moodle |
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "5" seconds
@@ -62,7 +62,7 @@ I need to create a formula
     And I add a "Page" to section "0"
     And I set the following fields to these values:
       | Name         | Test MathType for TinyMCE6 on Moodle |
-      | Page content | «<»>§&¨"`' |
+      | Page content | «<»>§&¨"`'                           |
     And I press "Save and display"
     Then "«<»>§&¨" "text" should exist
     Then "`'" "text" should exist
@@ -74,7 +74,7 @@ I need to create a formula
     And I add a "Page" to section "0"
     And I set the following fields to these values:
       | Name         | Test MathType for TinyMCE6 on Moodle |
-      | Page content | &laquo;Bonjour&raquo; |
+      | Page content | &laquo;Bonjour&raquo;                |
     And I press "Save and display"
     Then "«Bonjour»" "text" should exist
     Then Wirisformula should not exist
@@ -84,7 +84,7 @@ I need to create a formula
     And I am on "Course 1" course homepage with editing mode on
     And I add a "Page" to section "0"
     And I set the following fields to these values:
-      | Name         | Test MathType for TinyMCE6 on Moodle |
+      | Name | Test MathType for TinyMCE6 on Moodle |
     And I press "MathType" in "Page content" field in TinyMCE 6 editor
     And I wait until MathType editor is displayed
     And I wait "5" seconds
