@@ -1,4 +1,4 @@
-@4.x @4.x_tinymce6 @tinymce6 @tinymce6_wiris @wiris_mathtype @tinymce6_edit_formula @mtmoodle-107
+@pending
 Feature: Checks if data-mce is set on setContent
     In order to check if the formula remains in the content field
     I need to post

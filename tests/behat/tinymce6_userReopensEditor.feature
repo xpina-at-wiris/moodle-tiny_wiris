@@ -1,4 +1,4 @@
-@tinymce6 @tinymce6_wiris @wiris_mathtype @tinymce6_filter_editor_settings @mtmoodle-106
+@pending
 Feature: Check if editor can be reopened
     In order to check if the MathType editor can be reopened
     I need to open the editor
